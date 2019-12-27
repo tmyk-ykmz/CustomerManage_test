@@ -1,5 +1,7 @@
 package constants;
 
+
+
 /**
  * エラーメッセージ定義クラス
  */

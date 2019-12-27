@@ -72,19 +72,27 @@
                 alert("電話番号が入力されていません");
                 return false;
             }
-            if (!document.form1.zip.value.match(/^[0-9]{3}-[0-9]{4}$/)) {
+            if (document.form1.zip.value == "") {
+                return true;
+            }else if (!document.form1.zip.value.match(/^[0-9]{3}-[0-9]{4}$/)) {
                 alert("郵便番号の形式が違います");
                 return false;
             }
-            if (!document.form1.tel.value.match(/^0\d{1,4}-\d{1,4}-\d{3,4}$/)) {
+            if (document.form1.tel.value == "") {
+                return true;
+            }else if (!document.form1.tel.value.match(/^0\d{1,4}-\d{1,4}-\d{3,4}$/)) {
                 alert("TELの形式が違います");
                 return false;
             }
-            if (!document.form1.fax.value.match(/^0\d{1,4}-\d{1,4}-\d{3,4}$/)) {
+            if (document.form1.fax.value == "") {
+                return true;
+            }else if (!document.form1.fax.value.match(/^0\d{1,4}-\d{1,4}-\d{3,4}$/)) {
                 alert("FAXの形式が違います");
                 return false;
             }
-            if (!document.form1.email.value.match(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+            if (document.form1.email.value == "") {
+                return true;
+            }else if (!document.form1.email.value.match(/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
                 alert("E-mailの形式が違います");
                 return false;
             }
